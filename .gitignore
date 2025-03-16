@@ -67,6 +67,7 @@ writable/debugbar/*
 
 public/uploads/*
 !public/assets/*
+!public/assets/vendor/*
 
 php_errors.log
 
@@ -90,6 +91,7 @@ phpunit
 # Composer
 #-------------------------
 vendor/
+!public/assets/vendor/
 
 #-------------------------
 # IDE / Development Files
