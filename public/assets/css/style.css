@@ -49,8 +49,10 @@ CSS INDEX
 :root {
   --black: #000;
   --white: #fff;
-  --ul-primary: #EB5310;
-  --ul-secondary: #FAA019;
+  --ul-primary: #66963f;
+  /* --ul-primary: #EB5310; */
+  --ul-secondary: rgba(102,150,63,255);
+  /* --ul-secondary: #FAA019; */
   --ul-c3: #FFE9C8;
   --ul-c4: #FFF9F4;
   --ul-c5: #FC791A;
@@ -435,6 +437,7 @@ button {
   font-size: clamp(13px, 0.84vw, 16px);
   margin-bottom: 0;
   color: var(--ul-p);
+  /* text-align: justify; */
 }
 
 .ul-breadcrumb {
@@ -3434,7 +3437,7 @@ button {
   width: 100%;
 }
 .ul-footer .ul-nwsltr-form .top button {
-  background-color: var(--ul-c5);
+  background-color: var(--ul-primary);
   color: var(--white);
   aspect-ratio: 1/1;
   flex-shrink: 0;
@@ -5029,3 +5032,7 @@ button {
   background-color: var(--ul-primary);
   color: var(--white);
 }/*# sourceMappingURL=style.css.map */
+
+.text-justify {
+  text-align: justify;
+}
