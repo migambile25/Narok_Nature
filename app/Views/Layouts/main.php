@@ -6,6 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?=$_ENV['systemName'];?></title>
 
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <!-- Default meta tags (will be dynamically updated) -->
+    <meta name="description" content="Welcome to Narok Nature!">
+    <meta name="keywords" content="Environment, Nature, Narok Nature">
+    <meta name="author" content="<?=$_ENV['systemAuthorName'];?>">
+    <meta property="og:title" content="<?=$_ENV['systemName'];?>">
+    <meta property="og:description" content="Welcome to Narok Nature!">
+    <meta property="og:image" content="assets/img/logo.webp">
+    <meta property="og:site_name" content="<?=$_ENV['systemName'];?>">
+
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/logo.webp">
+
+
     <!-- libraries CSS -->
     <link rel="stylesheet" href="assets/icon/flaticon_charitics.css">
     <link rel="stylesheet" href="assets/vendor/bootstrap/bootstrap.min.css">
