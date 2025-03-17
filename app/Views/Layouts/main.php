@@ -93,7 +93,7 @@
                 <!-- actions -->
                 <div class="ul-header-actions">
                     <button class="ul-header-search-opener"><i class="flaticon-search"></i></button>
-                    <a href="/contact" class="ul-btn d-sm-inline-flex d-none"><i class="flaticon-fast-forward-double-right-arrows-symbol"></i> Join With us </a>
+                    <a href="#contact" class="ul-btn d-sm-inline-flex d-none"><i class="flaticon-fast-forward-double-right-arrows-symbol"></i> Join With us </a>
                     <button class="ul-header-sidebar-opener d-lg-none d-inline-flex"><i class="flaticon-menu"></i></button>
                 </div>
             </div>
@@ -104,6 +104,7 @@
     <?= $this->renderSection('content') ?>
 
     <!-- FOOTER SECTION START -->
+    <section id="contact">
     <footer class="ul-footer">
         <div class="ul-footer-top">
             <div class="ul-footer-container">
@@ -160,7 +161,7 @@
             <div class="ul-footer-container">
                 <div class="ul-footer-middle-wrapper wow animate__fadeInUp">
                     <div class="ul-footer-about">
-                        <a href="/"><img src="assets/img/logo.webp" alt="logo" class="logo"></a>
+                        <a href="/"><img src="assets/img/logo-white.webp" alt="logo" class="logo"></a>
                         <p class="ul-footer-about-txt text-justify">
                         Our sole objective is to promote gender equality, sustainable use of natural resources and equal access to quality social services among the pastoralist communities of Tanzania.
                         </p>
@@ -226,6 +227,7 @@
             <img src="assets/img/footer-vector-img.png" alt="Footer Image" class="ul-footer-vector-1">
         </div>
     </footer>
+    </section>
     <!-- FOOTER SECTION END -->
 
     <!-- libraries JS -->
