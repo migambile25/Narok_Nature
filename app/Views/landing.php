@@ -553,72 +553,29 @@
 
 
     <!-- GALLERY SECTION START -->
+    <?php
+    $galleryImages = [
+        "assets/img/1.webp",
+        "assets/img/2.webp",
+        "assets/img/3.webp",
+        "assets/img/4.webp",
+        "assets/img/5.webp",
+        "assets/img/6.webp",
+        "assets/img/7.webp"
+    ];
+    ?>
+
     <div class="ul-gallery overflow-hidden ul-section-spacing mx-auto pt-0">
         <div class="ul-gallery-slider swiper">
             <div class="swiper-wrapper">
-                <!-- single gallery item -->
-                <div class="ul-gallery-item swiper-slide">
-                    <img src="assets/img/gallery-item-1.png" alt="Gallery Image">
-                    <div class="ul-gallery-item-btn-wrapper">
-                        <a href="assets/img/gallery-item-1.png" data-fslightbox="gallery"><i class="flaticon-instagram"></i></a>
+                <?php foreach ($galleryImages as $image): ?>
+                    <div class="ul-gallery-item swiper-slide">
+                        <img src="<?= $image ?>" alt="Gallery Image">
+                        <div class="ul-gallery-item-btn-wrapper">
+                            <a href="<?= $image ?>" data-fslightbox="gallery"><i class="flaticon-instagram"></i></a>
+                        </div>
                     </div>
-                </div>
-
-                <!-- single gallery item -->
-                <div class="ul-gallery-item swiper-slide">
-                    <img src="assets/img/gallery-item-2.png" alt="Gallery Image">
-                    <div class="ul-gallery-item-btn-wrapper">
-                        <a href="assets/img/gallery-item-2.png" data-fslightbox="gallery"><i class="flaticon-instagram"></i></a>
-                    </div>
-                </div>
-
-                <!-- single gallery item -->
-                <div class="ul-gallery-item swiper-slide">
-                    <img src="assets/img/gallery-item-3.png" alt="Gallery Image">
-                    <div class="ul-gallery-item-btn-wrapper">
-                        <a href="assets/img/gallery-item-3.png" data-fslightbox="gallery"><i class="flaticon-instagram"></i></a>
-                    </div>
-                </div>
-
-                <!-- single gallery item -->
-                <div class="ul-gallery-item swiper-slide">
-                    <img src="assets/img/gallery-item-4.png" alt="Gallery Image">
-                    <div class="ul-gallery-item-btn-wrapper">
-                        <a href="assets/img/gallery-item-4.png" data-fslightbox="gallery"><i class="flaticon-instagram"></i></a>
-                    </div>
-                </div>
-
-                <!-- single gallery item -->
-                <div class="ul-gallery-item swiper-slide">
-                    <img src="assets/img/gallery-item-5.png" alt="Gallery Image">
-                    <div class="ul-gallery-item-btn-wrapper">
-                        <a href="assets/img/gallery-item-5.png" data-fslightbox="gallery"><i class="flaticon-instagram"></i></a>
-                    </div>
-                </div>
-
-                <!-- single gallery item -->
-                <div class="ul-gallery-item swiper-slide">
-                    <img src="assets/img/gallery-item-6.png" alt="Gallery Image">
-                    <div class="ul-gallery-item-btn-wrapper">
-                        <a href="assets/img/gallery-item-6.png" data-fslightbox="gallery"><i class="flaticon-instagram"></i></a>
-                    </div>
-                </div>
-
-                <!-- single gallery item -->
-                <div class="ul-gallery-item swiper-slide">
-                    <img src="assets/img/gallery-item-1.png" alt="Gallery Image">
-                    <div class="ul-gallery-item-btn-wrapper">
-                        <a href="assets/img/gallery-item-1.png" data-fslightbox="gallery"><i class="flaticon-instagram"></i></a>
-                    </div>
-                </div>
-
-                <!-- single gallery item -->
-                <div class="ul-gallery-item swiper-slide">
-                    <img src="assets/img/gallery-item-2.png" alt="Gallery Image">
-                    <div class="ul-gallery-item-btn-wrapper">
-                        <a href="assets/img/gallery-item-2.png" data-fslightbox="gallery"><i class="flaticon-instagram"></i></a>
-                    </div>
-                </div>
+                <?php endforeach; ?>
             </div>
         </div>
     </div>
