@@ -559,7 +559,6 @@
         "assets/img/2.webp",
         "assets/img/3.webp",
         "assets/img/4.webp",
-        "assets/img/5.webp",
         "assets/img/6.webp",
         "assets/img/7.webp"
     ];
