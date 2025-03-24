@@ -1,5 +1,6 @@
 <?= $this->extend('Layouts/main.php') ?>
 <?= $this->section('content') ?>
+<?php include('Layouts/data.php'); ?>
 
 <main class="overflow-hidden">
     <!-- HOME BANNER SECTION START -->
@@ -166,67 +167,31 @@
                     <span class="ul-section-sub-title">Our Services</span>
                     <h2 class="ul-section-title text-white">Dive into what we do!</h2>
                 </div>
-                <a href="/" class="ul-btn"><i class="flaticon-fast-forward-double-right-arrows-symbol"></i> Explore More</a>
+                <a href="#contact" class="ul-btn"><i class="flaticon-fast-forward-double-right-arrows-symbol"></i> Learn More</a>
             </div>
 
             <!-- events -->
             <div class="ul-events-wrapper">
                 <div class="row ul-bs-row row-cols-lg-2 row-cols-1">
-                    <!-- single event -->
-                    <div class="col wow animate__fadeInUp">
-                        <div class="ul-event">
-                            <div class="ul-event-img">
-                                <img src="assets/img/event-img.jpg" alt="Event Image">
-                                <span class="date"><span>1</span></span>
-                            </div>
-                            <div class="ul-event-txt">
-                                <h3 class="ul-event-title">Manager Disapproved of the Most Recent Work.</h3>
-                                <p class="ul-event-descr">Dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernaturaut</p>
+                    <?php shuffle($galleryImages); // Shuffle the gallery images array 
+                    ?>
+                    <?php foreach ($services as $index => $service): ?>
+                        <?php $image = $galleryImages[$index % count($galleryImages)]; ?>
+                        <!-- single service -->
+                        <div class="col wow animate__fadeInUp">
+                            <div class="ul-event">
+                                <div class="ul-event-img">
+                                    <img src="<?= $image ?>" alt="Event Image">
+                                    <span class="date"><span><?= $service['id']; ?></span></span>
+                                </div>
+                                <div class="ul-event-txt">
+                                    <h3 class="ul-event-title"><?= $service['title']; ?></h3>
+                                    <p class="ul-event-descr"><?= $service['description']; ?></p>
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    <?php endforeach; ?>
 
-                    <!-- single event -->
-                    <div class="col wow animate__fadeInUp">
-                        <div class="ul-event">
-                            <div class="ul-event-img">
-                                <img src="assets/img/blog-b-1.jpg" alt="Event Image">
-                                <span class="date"><span>2</span></span>
-                            </div>
-                            <div class="ul-event-txt">
-                                <h3 class="ul-event-title">Manager Disapproved of the Most Recent Work.</h3>
-                                <p class="ul-event-descr">Dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernaturaut</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- single event -->
-                    <div class="col wow animate__fadeInUp">
-                        <div class="ul-event">
-                            <div class="ul-event-img">
-                                <img src="assets/img/blog-2.jpg" alt="Event Image">
-                                <span class="date"><span>3</span></span>
-                            </div>
-                            <div class="ul-event-txt">
-                                <h3 class="ul-event-title">Manager Disapproved of the Most Recent Work.</h3>
-                                <p class="ul-event-descr">Dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernaturaut</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- single event -->
-                    <div class="col wow animate__fadeInUp">
-                        <div class="ul-event">
-                            <div class="ul-event-img">
-                                <img src="assets/img/blog-b-3.jpg" alt="Event Image">
-                                <span class="date"><span>4</span></span>
-                            </div>
-                            <div class="ul-event-txt">
-                                <h3 class="ul-event-title">Manager Disapproved of the Most Recent Work.</h3>
-                                <p class="ul-event-descr">Dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernaturaut</p>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
 
@@ -342,56 +307,34 @@
                 <div class="row row-cols-md-2 row-cols-1 gy-4 align-items-center">
                     <div class="col">
                         <div class="ul-why-join-img">
-                            <img src="assets/img/why-join.jpg" alt="Image">
+                            <img src="assets/img/1.webp" alt="Image">
                         </div>
                     </div>
 
                     <!-- txt -->
                     <div class="col">
                         <div class="ul-why-join-txt">
-                            <span class="ul-section-sub-title">Join us</span>
-                            <h2 class="ul-section-title">Why We Need You Become a Volunteer</h2>
-                            <p class="ul-section-descr">We help companies develop powerful corporate social responsibility, grantmaking, and employee engagement strategies.</p>
+                            <span class="ul-section-sub-title">FAQs</span>
+                            <h2 class="ul-section-title">Have some questions?</h2>
+                            <p class="ul-section-descr">Here are some to get you upto speed!</p>
 
                             <div class="ul-accordion">
-                                <div class="ul-single-accordion-item open">
-                                    <div class="ul-single-accordion-item__header">
-                                        <div class="left">
-                                            <h3 class="ul-single-accordion-item__title">Recognition and Fulfillment</h3>
+                                <?php $first = true; ?>
+                                <?php foreach ($faqs as $faq): ?>
+                                    <div class="ul-single-accordion-item <?= $first ? 'open' : '' ?>">
+                                        <div class="ul-single-accordion-item__header">
+                                            <div class="left">
+                                                <h3 class="ul-single-accordion-item__title"><?= $faq['question']; ?></h3>
+                                            </div>
+                                            <span class="icon"><i class="flaticon-next"></i></span>
                                         </div>
-                                        <span class="icon"><i class="flaticon-next"></i></span>
-                                    </div>
 
-                                    <div class="ul-single-accordion-item__body">
-                                        <p>Aonsectetur adipiscing elit Aenean scelerisque augue vitae consequat Juisque eget congue velit in cursus leo sodales the turpis euismod quis sapien euismod quis sapien the. E-learning is suitable for students, professionals, and anyone interested.</p>
-                                    </div>
-                                </div>
-
-                                <div class="ul-single-accordion-item">
-                                    <div class="ul-single-accordion-item__header">
-                                        <div class="left">
-                                            <h3 class="ul-single-accordion-item__title">Why Join Us as a Volunteer?</h3>
+                                        <div class="ul-single-accordion-item__body">
+                                            <p><?= $faq['answer']; ?></p>
                                         </div>
-                                        <span class="icon"><i class="flaticon-next"></i></span>
                                     </div>
-
-                                    <div class="ul-single-accordion-item__body">
-                                        <p>Aonsectetur adipiscing elit Aenean scelerisque augue vitae consequat Juisque eget congue velit in cursus leo sodales the turpis euismod quis sapien euismod quis sapien the. E-learning is suitable for students, professionals, and anyone interested.</p>
-                                    </div>
-                                </div>
-
-                                <div class="ul-single-accordion-item">
-                                    <div class="ul-single-accordion-item__header">
-                                        <div class="left">
-                                            <h3 class="ul-single-accordion-item__title">Be Part of a Community</h3>
-                                        </div>
-                                        <span class="icon"><i class="flaticon-next"></i></span>
-                                    </div>
-
-                                    <div class="ul-single-accordion-item__body">
-                                        <p>Aonsectetur adipiscing elit Aenean scelerisque augue vitae consequat Juisque eget congue velit in cursus leo sodales the turpis euismod quis sapien euismod quis sapien the. E-learning is suitable for students, professionals, and anyone interested.</p>
-                                    </div>
-                                </div>
+                                    <?php $first = false; ?>
+                                <?php endforeach; ?>
                             </div>
                         </div>
                     </div>
@@ -414,135 +357,33 @@
 
             <div class="ul-testimonial-slider swiper">
                 <div class="swiper-wrapper">
-                    <!-- single slide -->
-                    <div class="swiper-slide">
-                        <div class="ul-review">
-                            <div class="ul-review-rating">
-                                <i class="flaticon-star"></i>
-                                <i class="flaticon-star"></i>
-                                <i class="flaticon-star"></i>
-                                <i class="flaticon-star"></i>
-                                <i class="flaticon-star-1"></i>
-                            </div>
-                            <p class="ul-review-descr">Praesent ut lacus a velit tincidunt aliquam a eget urna. Sed ullamcorper tristique nisl at pharetra turpis accumsan et etiam eu sollicitudin eros. In imperdiet accumsan.</p>
-                            <div class="ul-review-bottom">
-                                <div class="ul-review-reviewer">
-                                    <div class="reviewer-image"><img src="assets/img/member-1.jpg" alt="reviewer image"></div>
-                                    <div>
-                                        <h3 class="reviewer-name">Esther Howard</h3>
-                                        <span class="reviewer-role">Web Designer</span>
-                                    </div>
+                    <?php foreach ($testimonials as $testimonial): ?>
+                        <!-- single slide -->
+                        <div class="swiper-slide">
+                            <div class="ul-review">
+                                <div class="ul-review-rating">
+                                    <i class="flaticon-star"></i>
+                                    <i class="flaticon-star"></i>
+                                    <i class="flaticon-star"></i>
+                                    <i class="flaticon-star"></i>
+                                    <i class="flaticon-star-1"></i>
                                 </div>
+                                <p class="ul-review-descr"><?= $testimonial['testimonial']; ?></p>
+                                <div class="ul-review-bottom">
+                                    <div class="ul-review-reviewer">
+                                        <div class="reviewer-image"><img src="assets/img/member-1.jpg" alt="reviewer image"></div>
+                                        <div>
+                                            <h3 class="reviewer-name"><?= $testimonial['name']; ?></h3>
+                                            <span class="reviewer-role"><?= $testimonial['role']; ?></span>
+                                        </div>
+                                    </div>
 
-                                <!-- icon -->
-                                <div class="ul-review-icon"><i class="flaticon-left"></i></div>
+                                    <!-- icon -->
+                                    <div class="ul-review-icon"><i class="flaticon-left"></i></div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-
-                    <!-- single slide -->
-                    <div class="swiper-slide">
-                        <div class="ul-review">
-                            <div class="ul-review-rating">
-                                <i class="flaticon-star"></i>
-                                <i class="flaticon-star"></i>
-                                <i class="flaticon-star"></i>
-                                <i class="flaticon-star"></i>
-                                <i class="flaticon-star-1"></i>
-                            </div>
-                            <p class="ul-review-descr">Praesent ut lacus a velit tincidunt aliquam a eget urna. Sed ullamcorper tristique nisl at pharetra turpis accumsan et etiam eu sollicitudin eros. In imperdiet accumsan.</p>
-                            <div class="ul-review-bottom">
-                                <div class="ul-review-reviewer">
-                                    <div class="reviewer-image"><img src="assets/img/member-2.jpg" alt="reviewer image"></div>
-                                    <div>
-                                        <h3 class="reviewer-name">Esther Howard</h3>
-                                        <span class="reviewer-role">Web Designer</span>
-                                    </div>
-                                </div>
-
-                                <!-- icon -->
-                                <div class="ul-review-icon"><i class="flaticon-left"></i></div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- single slide -->
-                    <div class="swiper-slide">
-                        <div class="ul-review">
-                            <div class="ul-review-rating">
-                                <i class="flaticon-star"></i>
-                                <i class="flaticon-star"></i>
-                                <i class="flaticon-star"></i>
-                                <i class="flaticon-star"></i>
-                                <i class="flaticon-star-1"></i>
-                            </div>
-                            <p class="ul-review-descr">Praesent ut lacus a velit tincidunt aliquam a eget urna. Sed ullamcorper tristique nisl at pharetra turpis accumsan et etiam eu sollicitudin eros. In imperdiet accumsan.</p>
-                            <div class="ul-review-bottom">
-                                <div class="ul-review-reviewer">
-                                    <div class="reviewer-image"><img src="assets/img/member-3.jpg" alt="reviewer image"></div>
-                                    <div>
-                                        <h3 class="reviewer-name">Esther Howard</h3>
-                                        <span class="reviewer-role">Web Designer</span>
-                                    </div>
-                                </div>
-
-                                <!-- icon -->
-                                <div class="ul-review-icon"><i class="flaticon-left"></i></div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- single slide -->
-                    <div class="swiper-slide">
-                        <div class="ul-review">
-                            <div class="ul-review-rating">
-                                <i class="flaticon-star"></i>
-                                <i class="flaticon-star"></i>
-                                <i class="flaticon-star"></i>
-                                <i class="flaticon-star"></i>
-                                <i class="flaticon-star-1"></i>
-                            </div>
-                            <p class="ul-review-descr">Praesent ut lacus a velit tincidunt aliquam a eget urna. Sed ullamcorper tristique nisl at pharetra turpis accumsan et etiam eu sollicitudin eros. In imperdiet accumsan.</p>
-                            <div class="ul-review-bottom">
-                                <div class="ul-review-reviewer">
-                                    <div class="reviewer-image"><img src="assets/img/member-4.jpg" alt="reviewer image"></div>
-                                    <div>
-                                        <h3 class="reviewer-name">Esther Howard</h3>
-                                        <span class="reviewer-role">Web Designer</span>
-                                    </div>
-                                </div>
-
-                                <!-- icon -->
-                                <div class="ul-review-icon"><i class="flaticon-left"></i></div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- single slide -->
-                    <div class="swiper-slide">
-                        <div class="ul-review">
-                            <div class="ul-review-rating">
-                                <i class="flaticon-star"></i>
-                                <i class="flaticon-star"></i>
-                                <i class="flaticon-star"></i>
-                                <i class="flaticon-star"></i>
-                                <i class="flaticon-star-1"></i>
-                            </div>
-                            <p class="ul-review-descr">Praesent ut lacus a velit tincidunt aliquam a eget urna. Sed ullamcorper tristique nisl at pharetra turpis accumsan et etiam eu sollicitudin eros. In imperdiet accumsan.</p>
-                            <div class="ul-review-bottom">
-                                <div class="ul-review-reviewer">
-                                    <div class="reviewer-image"><img src="assets/img/member-1.jpg" alt="reviewer image"></div>
-                                    <div>
-                                        <h3 class="reviewer-name">Esther Howard</h3>
-                                        <span class="reviewer-role">Web Designer</span>
-                                    </div>
-                                </div>
-
-                                <!-- icon -->
-                                <div class="ul-review-icon"><i class="flaticon-left"></i></div>
-                            </div>
-                        </div>
-                    </div>
+                    <?php endforeach; ?>
                 </div>
 
                 <div class="ul-testimonial-slider-pagination"></div>
@@ -553,16 +394,6 @@
 
 
     <!-- GALLERY SECTION START -->
-    <?php
-    $galleryImages = [
-        "assets/img/1.webp",
-        "assets/img/2.webp",
-        "assets/img/3.webp",
-        "assets/img/4.webp",
-        "assets/img/6.webp",
-        "assets/img/7.webp"
-    ];
-    ?>
 
     <div class="ul-gallery overflow-hidden ul-section-spacing mx-auto pt-0">
         <div class="ul-gallery-slider swiper">
