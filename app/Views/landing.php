@@ -114,6 +114,18 @@
     </section>
     <!-- ABOUT SECTION END -->
 
+    <!-- CTA(CALL TO ACTION) SECTION START -->
+    <section class="ul-cta">
+        <div class="ul-container">
+            <span class="ul-section-sub-title">Word from our Chairman</span>
+            <h2 class="ul-cta-title">
+                At Narok Nature, we are committed to driving positive change in our community through passionate advocacy for the environment, women, youth, and children. We believe that a sustainable future starts with empowering every voice and protecting what matters most.
+            </h2>
+            <a href="#contact" class="ul-btn"><i class="flaticon-fast-forward-double-right-arrows-symbol"></i> Join Us</a>
+        </div>
+        <img src="assets/img/cta-vector.svg" alt="Vector" class="ul-cta-vector">
+    </section>
+    <!-- CTA(CALL TO ACTION) SECTION END -->
 
     <!-- STATS SECTION START -->
     <div class="ul-stats ul-section-spacing">
