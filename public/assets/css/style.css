@@ -2441,6 +2441,43 @@ button {
   border-radius: clamp(15px, 1.58vw, 30px);
   opacity: 8%;
 }
+
+.ul-history {
+  background-color: var(--ul-gray3);
+  margin: auto;
+  position: relative;
+  z-index: 1;
+  text-decoration-color: #000;
+}
+.ul-history::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  background: url(../img/stats-events-bg-shape.svg) no-repeat center bottom/cover;
+  mix-blend-mode: multiply;
+  border-radius: clamp(15px, 1.58vw, 30px);
+  opacity: 8%;
+}
+
+.ul-donate {
+  background-color: var(--ul-black);
+  margin: auto;
+  position: relative;
+  z-index: 1;
+  text-decoration-color: #fff;
+}
+.ul-donate::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  background: url(../img/stats-events-bg-shape.svg) no-repeat center bottom/cover;
+  mix-blend-mode: multiply;
+  border-radius: clamp(15px, 1.58vw, 30px);
+  opacity: 8%;
+}
+
 .ul-why-join-img {
   width: max-content;
   max-width: 100%;

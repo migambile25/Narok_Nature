@@ -67,19 +67,11 @@
                         <span class="ul-section-sub-title ul-section-sub-title--2">About US</span>
                         <!-- <h2 class="ul-section-title"></h2> -->
                         <p class="ul-section-descr text-justify">
-                            In Tanzania particularly the pastoralist communities in all places of their domicile,
-                            there are a number of social and economic problems despite of the number of initiatives
-                            currently undertaken by different stakeholders to improve standard of living,
-                            create gender equality space, access to education for all, social welfare and service
-                            provision in general.
+                            In Tanzania, particularly within pastoralist communities across their areas of domicile, there are a number of social and economic problems despite the efforts by various stakeholders to improve living standards, promote gender equality, expand access to education, enhance social welfare, and improve service provision in general.
                             <br><br>
-                            The major setbacks that need to be alleviated are such as the prevailing poverty in holistic
-                            perspective, ignorance, injustice, unemployment, land conflicts, lack of social services,
-                            unskilled labor, under utilization of resources and environmental degradation mostly due to
-                            overgrazing. Narok Nature is committed to support the Government of Tanzania to ensure
-                            the gender equality, access to quality social services, and sustainable utilization of
-                            natural resources in order to attain sustainable development for all
+                            The major setbacks that need to be alleviated include prevailing poverty in a holistic perspective, ignorance, injustice, unemployment, land conflicts, lack of social services, unskilled labor, underutilization of resources, and environmental degradation — mostly due to overgrazing. In addition to empowerment efforts, there is also a significant ongoing initiative to support the transition of these communities from overdependence on pastoralism to more diversified and sustainable sources of livelihood, including an agricultural transformation that promotes food security and economic resilience. Narok Nature is committed to supporting the Government of Tanzania to ensure gender equality, access to quality social services, and the sustainable utilization of natural resources in order to attain sustainable development for all.
                         </p>
+
 
                         <div class="ul-about-bottom ul-about-2-bottom">
                             <div class="ul-about-2-bottom-block">
@@ -114,10 +106,42 @@
     </section>
     <!-- ABOUT SECTION END -->
 
+    <!-- HISTORY SECTION START -->
+    <section id="history" class="ul-history ul-section-spacing wow animate__fadeInUp">
+        <div class="ul-container">
+            <div class="row row-cols-md-2 row-cols-1 align-items-center gy-4">
+                <div class="col">
+                    <div class="ul-history-img">
+                        <div class="col">
+                            <div class="ul-why-join-img">
+                                <img src="assets/img/1.webp" alt="Image">
+                            </div>
+                        </div>
+                        <!-- <img src="assets/img/1.webp" alt="Our History" style="width:100%;border-radius:12px;"> -->
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="ul-history-txt">
+                        <span class="ul-section-sub-title ul-section-sub-title--2">Our History</span>
+                        <h2 class="ul-section-title">A Journey of Growth and Impact</h2>
+                        <p class="ul-section-descr text-justify">
+                            Narok Nature began its journey in 2010 under the name *Emarit*, with a focus on educating and empowering the Maasai community through restoration and transformation initiatives. As the vision expanded, the organization was officially registered as Narok Nature, opening its doors to a broader range of pastoralist communities. Since then, it has continued to grow in both reach and impact, working closely with various churches and faith-based groups—embracing all people regardless of religion, tribe, or background.
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- HISTORY SECTION END -->
+
     <!-- CTA(CALL TO ACTION) SECTION START -->
-    <section class="ul-cta">
+    <section class="ul-cta text-center">
         <div class="ul-container">
             <span class="ul-section-sub-title">Word from our Chairman</span>
+            <div class="mb-4">
+                <img src="assets/img/chairman.jpg" alt="Chairman Photo" style="width:120px;height:120px;object-fit:cover;border-radius:50%;border:4px solid #fff;box-shadow:0 2px 8px rgba(0,0,0,0.1);">
+            </div>
             <h2 class="ul-cta-title">
                 At Narok Nature, we are committed to driving positive change in our community through passionate advocacy for the environment, women, youth, and children. We believe that a sustainable future starts with empowering every voice and protecting what matters most.
             </h2>
@@ -311,6 +335,31 @@
     </section>
     <!-- TEAM SECTION END -->
 
+    <!-- DONATE SECTION START -->
+    <section id="donate" class="ul-donate ul-section-spacing text-center wow animate__fadeInUp" style="background:#f7fafc;">
+        <div class="ul-container">
+            <span class="ul-section-sub-title">Support Our Mission</span>
+            <h2 class="ul-section-title">Donate to Narok Nature</h2>
+            <p class="ul-section-descr mb-4">
+                Your contribution helps us empower communities and protect nature. Choose your preferred payment method below.
+            </p>
+
+            <div class="mb-4" style="display:flex;justify-content:center;gap:1rem;flex-wrap:wrap;">
+                <button class="ul-btn" onclick="showDonationDetails('M-Pesa')">Donate via M-Pesa</button>
+                <button class="ul-btn" onclick="showDonationDetails('Airtel')">Donate via Airtel Money</button>
+                <button class="ul-btn" onclick="showDonationDetails('Yas')">Donate via Mixx by Yas</button>
+                <!-- <button class="ul-btn" onclick="showDonationDetails('PayPal')">Donate via PayPal</button> -->
+                <button class="ul-btn" onclick="showDonationDetails('Bank')">Donate via Bank</button>
+            </div>
+            <p class="mt-3 text-muted" style="font-size:0.95em;">
+                For assistance,<br><br></a>
+                <a href="#contact" class="ul-btn"><i class="flaticon-fast-forward-double-right-arrows-symbol"></i> Contact Us</a>
+            </p>
+        </div>
+    </section>
+    <!-- DONATE SECTION END -->
+
+
 
     <!-- FAQ SECTION START -->
     <section id="faq" class="ul-why-join ul-section-spacing">
@@ -423,5 +472,40 @@
     </div>
     <!-- GALLERY SECTION END -->
 </main>
+<script>
+    function showDonationDetails(method) {
+        let title = '',
+            html = '';
 
+        switch (method) {
+            case 'M-Pesa':
+                title = 'M-Pesa Donation';
+                html = '<strong>Paybill:</strong> 123456<br><strong>Account:</strong> NAROK';
+                break;
+            case 'Airtel':
+                title = 'Airtel Money Donation';
+                html = '<strong>Paybill:</strong> 123456<br><strong>Account:</strong> NAROK';
+                break;
+            case 'Yas':
+                title = 'Mixx by Yas Donation';
+                html = '<strong>Paybill:</strong> 123456<br><strong>Account:</strong> NAROK';
+                break;
+            case 'PayPal':
+                title = 'PayPal Donation';
+                html = 'Click the button below to donate via PayPal.<br><br><a href="https://www.paypal.com/donate" target="_blank" class="ul-btn">Go to PayPal</a>';
+                break;
+            case 'Bank':
+                title = 'Bank Transfer';
+                html = '<strong>Bank:</strong> CRDB<br><strong>Account Number:</strong> 0123456789<br><strong>Account Name:</strong> Narok Nature';
+                break;
+        }
+
+        Swal.fire({
+            title: title,
+            html: html,
+            icon: 'info',
+            confirmButtonText: 'Close'
+        });
+    }
+</script>
 <?= $this->endSection('content') ?>
