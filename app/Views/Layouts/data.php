@@ -5,7 +5,20 @@ $galleryImages = [
     "assets/img/3.webp",
     "assets/img/4.webp",
     "assets/img/6.webp",
-    "assets/img/7.webp"
+    "assets/img/7.webp",
+    "assets/img/10.webp",
+    "assets/img/11.webp",
+    "assets/img/12.webp",
+    "assets/img/13.webp",
+    "assets/img/14.webp",
+    "assets/img/15.webp",
+    "assets/img/16.webp",
+    "assets/img/17.webp",
+    "assets/img/18.webp",
+    "assets/img/19.webp",
+    "assets/img/20.webp",
+    "assets/img/21.webp",
+
 ];
 
 $services = [
@@ -114,6 +127,30 @@ $testimonials = [
         "name" => "Grace Wanjiru",
         "role" => "Health Advocate",
         "testimonial" => "The mental health awareness program has helped many in our community open up and seek support. This initiative is truly life-changing!"
+    ]
+];
+
+$volunteers = [
+    [
+        "id" => 2,
+        "name" => "Thomas Laiza",
+        "image" => "assets/img/tomas.JPG",
+        "role" => "Volunteer",
+        "about" => "Working on the ground with Narok Nature has opened my eyes to the challenges faced by pastoralist communities. It’s inspiring to be part of the solution."
+    ],
+    [
+        "id" => 1,
+        "name" => "Sarah Mwangi",
+        "image" => "assets/img/merina.png",
+        "role" => "Volunteer",
+        "about" => "Volunteering with Narok Nature has been a rewarding experience. I’ve met amazing people and contributed to meaningful change in our communities."
+    ],
+    [
+        "id" => 3,
+        "name" => "Thomas Laiza",
+        "image" => "assets/img/another.png",
+        "role" => "Volunteer",
+        "about" => "Working on the ground with Narok Nature has opened my eyes to the challenges faced by pastoralist communities. It’s inspiring to be part of the solution."
     ]
 ];
 ?>

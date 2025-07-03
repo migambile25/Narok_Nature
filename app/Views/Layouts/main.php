@@ -88,7 +88,7 @@
         <div class="ul-header-bottom to-be-sticky">
             <div class="ul-header-bottom-wrapper ul-header-container">
                 <div class="logo-container">
-                    <a href="/" class="d-inline-block"><img src="assets/img/logo.webp" alt="logo" class="logo"></a>
+                    <a href="/" class="d-inline-block"><img src="assets/img/logo-2.webp" alt="logo" class="logo"></a>
                 </div>
 
                 <!-- header nav -->

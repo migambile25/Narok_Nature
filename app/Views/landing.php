@@ -107,7 +107,7 @@
     <!-- ABOUT SECTION END -->
 
     <!-- HISTORY SECTION START -->
-    <section id="history" class="ul-history ul-section-spacing wow animate__fadeInUp">
+    <section id="history" class="ul-history ul-section-spacing wow animate__fadeInUp" style="background: linear-gradient(135deg, #f7fafc 60%, #e3f0e8 100%);">
         <div class="ul-container">
             <div class="row row-cols-md-2 row-cols-1 align-items-center gy-4">
                 <div class="col">
@@ -115,19 +115,51 @@
                         <div class="col">
                             <div class="ul-why-join-img">
                                 <img src="assets/img/1.webp" alt="Image">
+                                <div class="ul-history-year-badge position-absolute top-0 start-0 bg-success text-white px-3 py-1 rounded-end" style="font-weight:bold; font-size:1.1em; margin-top:12px;">
+                                    Since 2010
+                                </div>
                             </div>
                         </div>
-                        <!-- <img src="assets/img/1.webp" alt="Our History" style="width:100%;border-radius:12px;"> -->
                     </div>
                 </div>
                 <div class="col">
                     <div class="ul-history-txt">
                         <span class="ul-section-sub-title ul-section-sub-title--2">Our History</span>
-                        <h2 class="ul-section-title">A Journey of Growth and Impact</h2>
-                        <p class="ul-section-descr text-justify">
-                            Narok Nature began its journey in 2010 under the name *Emarit*, with a focus on educating and empowering the Maasai community through restoration and transformation initiatives. As the vision expanded, the organization was officially registered as Narok Nature, opening its doors to a broader range of pastoralist communities. Since then, it has continued to grow in both reach and impact, working closely with various churches and faith-based groups—embracing all people regardless of religion, tribe, or background.
+                        <h2 class="ul-section-title mb-3">A Journey of Growth and Impact</h2>
+                        <p class="ul-section-descr text-justify mb-3">
+                            Narok Nature began its journey in 2010 under the name <strong>EMARIT</strong>, a grassroots initiative dedicated to empowering the Maasai community through education, restoration, and transformation.
                         </p>
-
+                        <div class="row g-2 mb-3">
+                            <?php
+                            $pillars = [
+                                ['icon' => 'flaticon-book', 'abbr' => 'E', 'title' => 'Education'],
+                                ['icon' => 'flaticon-tribe', 'abbr' => 'M', 'title' => 'Maasai'],
+                                ['icon' => 'flaticon-water', 'abbr' => 'A', 'title' => 'Aqua (Water)'],
+                                ['icon' => 'flaticon-restore', 'abbr' => 'R', 'title' => 'Restoration'],
+                                ['icon' => 'flaticon-idea', 'abbr' => 'I', 'title' => 'Initiatives'],
+                                ['icon' => 'flaticon-growth', 'abbr' => 'T', 'title' => 'Transformation'],
+                            ];
+                            foreach ($pillars as $pillar): ?>
+                                <div class="col-6 col-md-4">
+                                    <div class="d-flex align-items-center gap-2 p-2 bg-white rounded shadow-sm" style="min-height:60px;">
+                                        <i class="<?= $pillar['icon'] ?> text-success" style="font-size:1.5em;"></i>
+                                        <div>
+                                            <span class="fw-bold"><?= $pillar['abbr'] ?></span> – <?= $pillar['title'] ?>
+                                        </div>
+                                    </div>
+                                </div>
+                            <?php endforeach; ?>
+                        </div>
+                        <p class="ul-section-descr text-justify mb-3">
+                            As our vision evolved, we officially registered as <strong>Narok Nature</strong>, expanding our mission to serve a wider range of pastoralist communities across the region.
+                        </p>
+                        <blockquote class="blockquote mb-3" style="border-left:4px solid #2e7d32;padding-left:1em;color:#2e7d32;">
+                            "Empowering communities, embracing diversity, and creating lasting change."
+                        </blockquote>
+                        <p class="ul-section-descr text-justify">
+                            Today, Narok Nature works collaboratively with churches and faith-based groups, while embracing people of all religions, tribes, and backgrounds. We remain deeply committed to youth empowerment, environmental advocacy, and inclusive community engagement.
+                        </p>
+                        <a href="#contact" class="ul-btn mt-3"><i class="flaticon-fast-forward-double-right-arrows-symbol"></i> Contact Us</a>
                     </div>
                 </div>
             </div>
@@ -217,7 +249,6 @@
                         <div class="col wow animate__fadeInUp">
                             <div class="ul-event">
                                 <div class="ul-event-img">
-                                    <img src="<?= $image ?>" alt="Event Image">
                                     <span class="date"><span><?= $service['id']; ?></span></span>
                                 </div>
                                 <div class="ul-event-txt">
@@ -240,13 +271,31 @@
     </section>
     <!-- SERVICES SECTION END -->
 
+    <!-- GALLERY SECTION START -->
+    <section id="gallery" class=" pt-5 ul-gallery ul-section-spacing wow animate__fadeInUp">
+        <div class="ul-gallery overflow-hidden ul-section-spacing mx-auto pt-0">
+            <div class="ul-gallery-slider swiper">
+                <div class="swiper-wrapper">
+                    <?php foreach ($galleryImages as $image): ?>
+                        <div class="ul-gallery-item swiper-slide">
+                            <img src="<?= $image ?>" alt="Gallery Image">
+                            <div class="ul-gallery-item-btn-wrapper">
+                                <a href="<?= $image ?>" data-fslightbox="gallery"><i class="flaticon-instagram"></i></a>
+                            </div>
+                        </div>
+                    <?php endforeach; ?>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- GALLERY SECTION END -->
     <!-- TEAM SECTION START -->
     <section id="team" class="ul-team ul-section-spacing pt-0">
         <div class="ul-container">
             <!-- Heading -->
             <div class="ul-section-heading justify-content-between">
                 <div class="left">
-                    <span class="ul-section-sub-title">Our Team</span>
+                    <span class="ul-section-sub-title">Our Volunteers</span>
                     <h2 class="ul-section-title">Skilled Personnel Dedicated to You</h2>
                 </div>
                 <div>
@@ -254,82 +303,29 @@
                 </div>
             </div>
 
-            <div class="row row-cols-md-4 row-cols-sm-3 row-cols-2 row-cols-xxs-1 ul-team-row justify-content-center">
+            <div class="row row-cols-md-4 row-cols-sm-4 row-cols-2 row-cols-xxs-1 ul-team-row justify-content-center">
                 <!-- single member -->
-                <div class="col">
-                    <div class="ul-team-member">
-                        <div class="ul-team-member-img">
-                            <img src="assets/img/member-1.jpg" alt="Team Member Image">
-                            <div class="ul-team-member-socials">
-                                <a href="#"><i class="flaticon-facebook"></i></a>
-                                <a href="#"><i class="flaticon-twitter"></i></a>
-                                <a href="#"><i class="flaticon-linkedin-big-logo"></i></a>
-                                <a href="#"><i class="flaticon-instagram"></i></a>
+                <?php foreach ($volunteers as $volunteer): ?>
+                    <div class="col">
+                        <div class="ul-team-member">
+                            <div class="ul-team-member-img">
+                                <img src="<?= $volunteer['image'] ?>" alt="<?= $volunteer['name'] ?> Image">
+                                <div class="ul-team-member-socials">
+                                    <a href="#"><i class="flaticon-facebook"></i></a>
+                                    <a href="#"><i class="flaticon-twitter"></i></a>
+                                    <a href="#"><i class="flaticon-linkedin-big-logo"></i></a>
+                                    <a href="#"><i class="flaticon-instagram"></i></a>
+                                </div>
+                            </div>
+                            <div class="ul-team-member-info">
+                                <h3 class="ul-team-member-name"><?= $volunteer['name'] ?></h3>
+                                <p class="ul-team-member-designation"><?= $volunteer['role'] ?></p>
                             </div>
                         </div>
-                        <div class="ul-team-member-info">
-                            <h3 class="ul-team-member-name">John Doe</h3>
-                            <p class="ul-team-member-designation">Attorney</p>
-                        </div>
                     </div>
-                </div>
+                <?php endforeach; ?>
 
-                <!-- single member -->
-                <div class="col">
-                    <div class="ul-team-member">
-                        <div class="ul-team-member-img">
-                            <img src="assets/img/member-2.jpg" alt="Team Member Image">
-                            <div class="ul-team-member-socials">
-                                <a href="#"><i class="flaticon-facebook"></i></a>
-                                <a href="#"><i class="flaticon-twitter"></i></a>
-                                <a href="#"><i class="flaticon-linkedin-big-logo"></i></a>
-                                <a href="#"><i class="flaticon-instagram"></i></a>
-                            </div>
-                        </div>
-                        <div class="ul-team-member-info">
-                            <h3 class="ul-team-member-name">John Doe</h3>
-                            <p class="ul-team-member-designation">Attorney</p>
-                        </div>
-                    </div>
-                </div>
 
-                <!-- single member -->
-                <div class="col">
-                    <div class="ul-team-member">
-                        <div class="ul-team-member-img">
-                            <img src="assets/img/member-3.jpg" alt="Team Member Image">
-                            <div class="ul-team-member-socials">
-                                <a href="#"><i class="flaticon-facebook"></i></a>
-                                <a href="#"><i class="flaticon-twitter"></i></a>
-                                <a href="#"><i class="flaticon-linkedin-big-logo"></i></a>
-                                <a href="#"><i class="flaticon-instagram"></i></a>
-                            </div>
-                        </div>
-                        <div class="ul-team-member-info">
-                            <h3 class="ul-team-member-name">John Doe</h3>
-                            <p class="ul-team-member-designation">Attorney</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- single member -->
-                <div class="col">
-                    <div class="ul-team-member">
-                        <div class="ul-team-member-img">
-                            <img src="assets/img/member-4.jpg" alt="Team Member Image">
-                            <div class="ul-team-member-socials">
-                                <a href="#"><i class="flaticon-facebook"></i></a>
-                                <a href="#"><i class="flaticon-twitter"></i></a>
-                                <a href="#"><i class="flaticon-linkedin-big-logo"></i></a>
-                                <a href="#"><i class="flaticon-instagram"></i></a>
-                            </div>
-                        </div>
-                        <div class="ul-team-member-info">
-                            <h3 class="ul-team-member-name">John Doe</h3>
-                            <p class="ul-team-member-designation">Attorney</p>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
     </section>
@@ -345,11 +341,11 @@
             </p>
 
             <div class="mb-4" style="display:flex;justify-content:center;gap:1rem;flex-wrap:wrap;">
-                <button class="ul-btn" onclick="showDonationDetails('M-Pesa')">Donate via M-Pesa</button>
-                <button class="ul-btn" onclick="showDonationDetails('Airtel')">Donate via Airtel Money</button>
-                <button class="ul-btn" onclick="showDonationDetails('Yas')">Donate via Mixx by Yas</button>
-                <!-- <button class="ul-btn" onclick="showDonationDetails('PayPal')">Donate via PayPal</button> -->
-                <button class="ul-btn" onclick="showDonationDetails('Bank')">Donate via Bank</button>
+                <button class="ul-btn" onclick="showDonationDetails('Mobile')">Donate via Mobile</button>
+                <!-- <button class="ul-btn" onclick="showDonationDetails('Airtel')">Donate via Airtel Money</button>
+                <button class="ul-btn" onclick="showDonationDetails('Yas')">Donate via Mixx by Yas</button> -->
+                <button class="ul-btn" onclick="showDonationDetails('Bank-Tsh')">Donate via Bank (Tsh)</button>
+                <button class="ul-btn" onclick="showDonationDetails('Bank-USD')">Donate via Bank (USD)</button>
             </div>
             <p class="mt-3 text-muted" style="font-size:0.95em;">
                 For assistance,<br><br></a>
@@ -453,24 +449,6 @@
     </section>
     <!-- TESTIMONIAL SECTION END -->
 
-
-    <!-- GALLERY SECTION START -->
-
-    <div class="ul-gallery overflow-hidden ul-section-spacing mx-auto pt-0">
-        <div class="ul-gallery-slider swiper">
-            <div class="swiper-wrapper">
-                <?php foreach ($galleryImages as $image): ?>
-                    <div class="ul-gallery-item swiper-slide">
-                        <img src="<?= $image ?>" alt="Gallery Image">
-                        <div class="ul-gallery-item-btn-wrapper">
-                            <a href="<?= $image ?>" data-fslightbox="gallery"><i class="flaticon-instagram"></i></a>
-                        </div>
-                    </div>
-                <?php endforeach; ?>
-            </div>
-        </div>
-    </div>
-    <!-- GALLERY SECTION END -->
 </main>
 <script>
     function showDonationDetails(method) {
@@ -494,9 +472,17 @@
                 title = 'PayPal Donation';
                 html = 'Click the button below to donate via PayPal.<br><br><a href="https://www.paypal.com/donate" target="_blank" class="ul-btn">Go to PayPal</a>';
                 break;
-            case 'Bank':
-                title = 'Bank Transfer';
-                html = '<strong>Bank:</strong> CRDB<br><strong>Account Number:</strong> 0123456789<br><strong>Account Name:</strong> Narok Nature';
+            case 'Mobile':
+                title = 'Mobile Donation';
+                html = '<strong>Phone Number:</strong> +255 792 179 984<br><strong>Account:</strong> NAROK NATURE';
+                break;
+            case 'Bank-Tsh':
+                title = 'Bank Transfer (Tsh)';
+                html = '<strong>Bank:</strong> NMB<br><strong>Account Number:</strong> 21210091060<br><strong>Account Name:</strong> Narok Nature';
+                break;
+            case 'Bank-USD':
+                title = 'Bank Transfer (USD)';
+                html = '<strong>Bank:</strong> NMB<br><strong>Account Number:</strong> 21210091059<br><strong>Account Name:</strong> Narok Nature';
                 break;
         }
 
