@@ -133,14 +133,14 @@ $testimonials = [
 $volunteers = [
     [
         "id" => 2,
-        "name" => "Thomas Laiza",
-        "image" => "assets/img/tomas.JPG",
+        "name" => "Tibico Spano",
+        "image" => "assets/img/tibico.JPG",
         "role" => "Volunteer",
         "about" => "Working on the ground with Narok Nature has opened my eyes to the challenges faced by pastoralist communities. It’s inspiring to be part of the solution."
     ],
     [
         "id" => 1,
-        "name" => "Sarah Mwangi",
+        "name" => "Merina Ulisa",
         "image" => "assets/img/merina.png",
         "role" => "Volunteer",
         "about" => "Volunteering with Narok Nature has been a rewarding experience. I’ve met amazing people and contributed to meaningful change in our communities."
@@ -148,7 +148,7 @@ $volunteers = [
     [
         "id" => 3,
         "name" => "Thomas Laiza",
-        "image" => "assets/img/another.png",
+        "image" => "assets/img/tomas.png",
         "role" => "Volunteer",
         "about" => "Working on the ground with Narok Nature has opened my eyes to the challenges faced by pastoralist communities. It’s inspiring to be part of the solution."
     ]
