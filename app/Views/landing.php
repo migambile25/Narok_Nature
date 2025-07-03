@@ -127,7 +127,7 @@
                         <span class="ul-section-sub-title ul-section-sub-title--2">Our History</span>
                         <h2 class="ul-section-title mb-3">A Journey of Growth and Impact</h2>
                         <p class="ul-section-descr text-justify mb-3">
-                            Narok Nature began its journey in 2010 under the name <strong>EMARIT</strong>, a grassroots initiative dedicated to empowering the Maasai community through education, restoration, and transformation.
+                            Narok Nature began its journey in 2010 under the name <strong>EMARIT Maasai Rafiki</strong>, a grassroots initiative dedicated to empowering the Maasai community through education, restoration, and transformation.
                         </p>
                         <div class="row g-2 mb-3">
                             <?php
@@ -248,9 +248,7 @@
                         <!-- single service -->
                         <div class="col wow animate__fadeInUp">
                             <div class="ul-event">
-                                <div class="ul-event-img">
-                                    <span class="date"><span><?= $service['id']; ?></span></span>
-                                </div>
+                                <span class="date"><span><?= $service['id']; ?></span></span>
                                 <div class="ul-event-txt">
                                     <h3 class="ul-event-title"><?= $service['title']; ?></h3>
                                     <p class="ul-event-descr"><?= $service['description']; ?></p>
